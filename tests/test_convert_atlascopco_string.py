@@ -7,7 +7,7 @@ variousMethods = VariousMethods()
 @pytest.mark.parametrize(
     "input,expected",
     [
-        (87, "ERROR:)"),
+        (3, "Atlas"),
         (15, "AtlasCopco"),
         (9, "Atlas"),
         (20, "Copco"),
