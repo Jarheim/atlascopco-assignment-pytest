@@ -4,10 +4,15 @@ from various_methods import VariousMethods
 
 variousMethods = VariousMethods()
 
-def test_reverse_string():
-    actual = variousMethods.ReverseString("abc123$\"")
-    assert actual == "\"$321cba"
-    print(actual)
+@pytest.mark.parametrize(
+    "input,expected",
+    [
+        ("abc123$\"", "\"$321cba"),
+        ("a", "a")
+    ])
+def test_reverse_string(input, expected):
+    actual = variousMethods.ReverseString(input)
+    assert actual == expected
 
 @pytest.mark.parametrize(
     "input,expected",
